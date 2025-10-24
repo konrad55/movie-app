@@ -12,7 +12,7 @@ export default function Header() {
 
   return (
     <div className="px-5 w-full h-[80px] font-semibold text-movie-orange text-3xl flex items-center justify-between gap-4">
-      <Link href={"/"}>
+      <Link href={"/"} data-testid="movie-database-link">
         <div className="flex gap-4 items-center whitespace-nowrap">
           <MovieIcon fontSize={35} />
           Movie Database
@@ -23,6 +23,7 @@ export default function Header() {
           variant="outline"
           size="sm"
           className="flex justify-start w-full"
+          aria-label="Search movie"
           onClick={() => setOpenSearch(true)}
         >
           <Search size={20} />
