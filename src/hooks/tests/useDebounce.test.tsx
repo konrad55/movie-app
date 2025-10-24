@@ -8,7 +8,7 @@ describe('useDebounce', () => {
     expect(result.current).toBe('test');
   });
 
-  it('should return the debounced value after the specified delay', async () => {
+  it('should return the debounced value after the delay', async () => {
     // Use fake timers to control time
     vi.useFakeTimers();
 
@@ -41,7 +41,7 @@ describe('useDebounce', () => {
     vi.useRealTimers();
   });
 
-  it('should reset the timer when value changes before delay expires', async () => {
+  it('should reset the timer when value changes', async () => {
     vi.useFakeTimers();
 
     const { result, rerender } = renderHook(
